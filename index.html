@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/left.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="./node_modules/echarts/dist/echarts.js"></script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- 头部区域 -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 左边选择切换区域 -->
+          <div class="col-3">
+              <div class="personal-message">
+                  <div class="personal-message-inner">
+                      <img src="./img/pexels-ian-bittencourt-andrade-2427468.jpg">
+                      <div class="personal-message-inner-text">
+                          <h3>jenney</h3>
+                          <p>管理员</p>
+                      </div>
+                  </div>
+
+              </div>
+            <div class="list-group">
+                
+                <button type="button" class="list-group-item list-group-item-action btn-success disabled">
+                    <h2 class="function">管理功能</h2>
+                </button>
+                
+                <button type="button" class="list-group-item list-group-item-action btn-success" aria-current="true" onclick="window.location.href='./personal-message.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 18 18">
+                        <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                      </svg>
+                 管理员设置
+                </button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house" viewBox="0 0 18 18">
+                        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                      </svg>用户数据</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-calendar-week-fill" viewBox="0 0 18 18">
+                        <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM9.5 7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm3 0h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zM2 10.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3.5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                      </svg>日程表</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-archive-fill" viewBox="0 0 18 18">
+                        <path d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z"/>
+                      </svg>form表单</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-award-fill" viewBox="0 0 18 18">
+                        <path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                        <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                      </svg>echars表</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                      </svg>用户地图</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-flag-fill" viewBox="0 0 18 18">
+                        <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12.435 12.435 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A19.626 19.626 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a19.587 19.587 0 0 0 1.349-.476l.019-.007.004-.002h.001"/>
+                      </svg>下载</button>
+                <button type="button" class="list-group-item list-group-item-action btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-stack" viewBox="0 0 18 18">
+                    <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z"/>
+                    <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z"/>
+                  </svg>注册表</button>
+              </div>
+          </div>
+
+          <!-- 右边区域表格 -->
+          <div class="col-9">
+          
+
+        <!-- 对于点击不同的按钮实现col-9的不断切换 -->
+        <!--用户数据-->
+         <div class="col-12">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">username</th>
+                <th scope="col">password</th>
+                <th scope="col">sex</th>
+                <th scope="col">age</th>
+                <th scope="col">ID-card</th>
+                <th scope="col">address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>女</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td >Larry the Bird</td>
+                <td >123</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td >Bird</td>
+                <td>twitter</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+
+              <tr>
+                <th scope="row">5</th>
+                <td >Bird</td>
+                <td>twitter</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td >Bird</td>
+                <td>twitter</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td >Bird</td>
+                <td>twitter</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td >Bird</td>
+                <td>twitter</td>
+                <td>男</td>
+                <td >47</td>
+                <td >1233333333</td>
+                <td >123</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- 日程表 -->
+        <div class="col-12">
+            
+        </div>
+        <!-- form表单 -->
+
+        <!--echars表-->
+         <div class="col-12" style="display: none;">
+            <div class="container">
+              <div class="row ">
+                <div class="col">
+                 <!-- Just an image -->
+            <nav class="navbar navbar-light bg-light">
+              <a class="navbar-brand" href="#">
+                <img src="./img/bootstrap-solid.svg" width="30" height="30" alt="">
+                xxx有限公司
+              </a>
+            </nav>
+                 
+                </div>
+                <div class="col-6">
+                  <nav class="navbar navbar-light bg-light ">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-1 w-90" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </nav>
+                </div>
+                <div class="col">
+                  <div class="message">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                  </svg>
+                <a>信息</a>
+                </div>
+                <div class="message">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots-fill" viewBox="0 0 16 16">
+                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm5 4a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>
+                  <a>信息</a>
+                </div>
+                
+                    <a  href="#">退出登录</a>
+                  
+                 
+                </div>
+              </div>
+          </div>
+              
+          
+             <!-- 中间表格统计 -->
+            <!-- 四个表 -->
+
+            <div class="row ">
+              <div class="col" >
+                <div id="main" style="width: 450px;height:400px;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main'));
+            
+                    // 指定图表的配置项和数据
+                    var option = {
+                        title: {
+                            text: 'ECharts 入门示例'
+                        },
+                        tooltip: {},
+                        legend: {
+                            data:['销量']
+                        },
+                        xAxis: {
+                            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                        },
+                        yAxis: {},
+                        series: [{
+                            name: '销量',
+                            type: 'bar',
+                            data: [5, 20, 36, 10, 10, 20]
+                        }]
+                    };
+            
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+              </div>
+              <div class="col">
+                <div id="container3" style="width: 450px;height:400px;"></div>
+
+                <script type="text/javascript">
+                  var dom = document.getElementById("container3");
+                  var myChart = echarts.init(dom);
+                  var app = {};
+                  
+                  var option;
+                
+                  option = {
+                      title: {
+                          text: '堆叠区域图'
+                      },
+                      tooltip: {
+                          trigger: 'axis',
+                          axisPointer: {
+                              type: 'cross',
+                              label: {
+                                  backgroundColor: '#6a7985'
+                              }
+                          }
+                      },
+                      legend: {
+                          data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+                      },
+                      toolbox: {
+                          feature: {
+                              saveAsImage: {}
+                          }
+                      },
+                      grid: {
+                          left: '3%',
+                          right: '4%',
+                          bottom: '3%',
+                          containLabel: true
+                      },
+                      xAxis: [
+                          {
+                              type: 'category',
+                              boundaryGap: false,
+                              data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                          }
+                      ],
+                      yAxis: [
+                          {
+                              type: 'value'
+                          }
+                      ],
+                      series: [
+                          {
+                              name: '邮件营销',
+                              type: 'line',
+                              stack: '总量',
+                              areaStyle: {},
+                              emphasis: {
+                                  focus: 'series'
+                              },
+                              data: [120, 132, 101, 134, 90, 230, 210]
+                          },
+                          {
+                              name: '联盟广告',
+                              type: 'line',
+                              stack: '总量',
+                              areaStyle: {},
+                              emphasis: {
+                                  focus: 'series'
+                              },
+                              data: [220, 182, 191, 234, 290, 330, 310]
+                          },
+                          {
+                              name: '视频广告',
+                              type: 'line',
+                              stack: '总量',
+                              areaStyle: {},
+                              emphasis: {
+                                  focus: 'series'
+                              },
+                              data: [150, 232, 201, 154, 190, 330, 410]
+                          },
+                          {
+                              name: '直接访问',
+                              type: 'line',
+                              stack: '总量',
+                              areaStyle: {},
+                              emphasis: {
+                                  focus: 'series'
+                              },
+                              data: [320, 332, 301, 334, 390, 330, 320]
+                          },
+                          {
+                              name: '搜索引擎',
+                              type: 'line',
+                              stack: '总量',
+                              label: {
+                                  show: true,
+                                  position: 'top'
+                              },
+                              areaStyle: {},
+                              emphasis: {
+                                  focus: 'series'
+                              },
+                              data: [820, 932, 901, 934, 1290, 1330, 1320]
+                          }
+                      ]
+                  };
+                  
+                  if (option && typeof option === 'object') {
+                      myChart.setOption(option);
+                  }
+                  
+                          </script>
+                          </div>
+               <div class="w-100"></div>
+               <div class="col"  style="margin-top: 50px;">
+                         
+                              <div id="container" style="width: 450px;height:400px;"></div>
+                      
+                              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+                      
+                              <script type="text/javascript">
+                      var dom = document.getElementById("container");
+                      var myChart = echarts.init(dom);
+                      var app = {};
+                      
+                      var option;
+                      
+                      option = {
+                          title: {
+                              text: '某站点用户访问来源',
+                              subtext: '纯属虚构',
+                              left: 'center'
+                          },
+                          tooltip: {
+                              trigger: 'item'
+                          },
+                          legend: {
+                              orient: 'vertical',
+                              left: 'left',
+                          },
+                          series: [
+                              {
+                                  name: '访问来源',
+                                  type: 'pie',
+                                  radius: '50%',
+                                  data: [
+                                      {value: 1048, name: '搜索引擎'},
+                                      {value: 735, name: '直接访问'},
+                                      {value: 580, name: '邮件营销'},
+                                      {value: 484, name: '联盟广告'},
+                                      {value: 300, name: '视频广告'}
+                                  ],
+                                  emphasis: {
+                                      itemStyle: {
+                                          shadowBlur: 10,
+                                          shadowOffsetX: 0,
+                                          shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                      }
+                                  }
+                              }
+                          ]
+                      };
+                      
+                      if (option && typeof option === 'object') {
+                          myChart.setOption(option);
+                      }
+                      
+                              </script>
+                          </div>
+              <div class="col" style="margin-top: 50px;">
+
+                      <div id="container4" style="width: 450px;height:400px;"></div>
+              
+                      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+              
+                      <script type="text/javascript">
+              var dom = document.getElementById("container4");
+              var myChart = echarts.init(dom);
+              var app = {};
+              
+              var option;
+              
+              
+              
+              option = {
+                  title: {
+                      text: '基础雷达图'
+                  },
+                  legend: {
+                      data: ['预算分配（Allocated Budget）', '实际开销（Actual Spending）']
+                  },
+                  radar: {
+                      // shape: 'circle',
+                      indicator: [
+                          { name: '销售（Sales）', max: 6500},
+                          { name: '管理（Administration）', max: 16000},
+                          { name: '信息技术（Information Technology）', max: 30000},
+                          { name: '客服（Customer Support）', max: 38000},
+                          { name: '研发（Development）', max: 52000},
+                          { name: '市场（Marketing）', max: 25000}
+                      ]
+                  },
+                  series: [{
+                      name: '预算 vs 开销（Budget vs spending）',
+                      type: 'radar',
+                      data: [
+                          {
+                              value: [4200, 3000, 20000, 35000, 50000, 18000],
+                              name: '预算分配（Allocated Budget）'
+                          },
+                          {
+                              value: [5000, 14000, 28000, 26000, 42000, 21000],
+                              name: '实际开销（Actual Spending）'
+                          }
+                      ]
+                  }]
+              };
+              
+              if (option && typeof option === 'object') {
+                  myChart.setOption(option);
+              }
+              
+                      </script>
+                
+
+              </div>
+              
+                    </div>
+
+
+              
+        </div>
+         </div>
+
+
+
+              </div>
+            
+          
+        
+</div>
+
+
+
+<!-- 尾部固定商标区域 -->
+<footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">
+        <p class="float-right"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+          </svg></a></p>
+          <p>&copy; 2020-2021 Company, Inc. &middot; <a href="#">xxx公司后台管理系统</a> &middot; <a href="#">Terms</a></p>
+          <p>&copy;备案号<span>：xxxx</span></p>
+          <p>联系号码：xxxx</p>
+          <h5>此页面是曹菀菁的个人练习，仅供学习！</h5>
+      </span>
+    </div>
+  </footer>
+  <script src="./js/jquery-3.5.1.slim.min.js"></script>
+<script src="./js/index-left.js"></script>
+  </body>
+</html>
